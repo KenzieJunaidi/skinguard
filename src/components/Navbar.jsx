@@ -1,0 +1,39 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+const FadeIn = {
+    initial: {opacity: 0},
+    animate: {opacity: 1},
+    transition: {duration: 0.6},
+};
+
+const staggerContainer = {
+    animate: {
+        transition: {
+            staggerChildren: 0.5,
+        },
+    },
+};
+
+export const Navbar = () => {
+    
+    return (
+        <motion.div className="navbar" initial={{y: -200}} animate={{y: 0}} transition={{duration: 1, delay: 0.3, ease: "easeOut"}}>
+            <motion.div className="title" whileHover={{scale: 1.05, textShadow: "0 0 6px rgba(0, 0, 0, 0.3)"}}>
+                <span>Skin</span>
+                <span className="title-recolor">Guard</span>
+            </motion.div>
+            <motion.ul className="nav-links" variants={staggerContainer}>
+                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                    <a href="#hero">Home</a>
+                </motion.li>
+                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                    <a href="#learn">Learn</a>
+                </motion.li>
+                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                    <a href="#detect">Detect</a>
+                </motion.li>
+            </motion.ul>
+        </motion.div>
+    );
+}

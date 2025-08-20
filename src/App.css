@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #F8FAFC;
+  --card-background: #FFFFFF;
+
+  --heading-color: #e2e8f0;
+  --text-color: #475569;
+
+  --primary-color: #2B6777;
+  --secondary-color: #ACF0DA;
+  --accent-color: #5DBB9F;
+
+  --subtle-border: #E2E8F0;
+  --positive-color: #4CAF50;
+  --negative-color: #D32F2F;
+} 
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.app.loaded {
+  opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1.5rem 5%;
+
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 100;
+}
+
+.title {
+  color: black;
+  font-weight: 700;
+  font-size: 1.75rem;
+
+  cursor: default;
+}
+
+.title-recolor {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links a::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0;
+
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+  max-width: 50vw;
+  padding: 0 5%;
+}
+
+.headline {
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.headline h1 {
+  color: var(--primary-color);
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: black;
+  font-size: 1.85rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.note {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: inline-flex;
+
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.hero-image {
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
