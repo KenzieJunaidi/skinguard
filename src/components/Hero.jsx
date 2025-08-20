@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
+
     return (
         <motion.section id="hero" className="hero">
             <div className="hero-container">

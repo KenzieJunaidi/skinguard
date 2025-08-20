@@ -10,7 +10,7 @@ const FadeIn = {
 const staggerContainer = {
     animate: {
         transition: {
-            staggerChildren: 0.5,
+            staggerChildren: 0.5
         },
     },
 };
@@ -23,14 +23,14 @@ export const Navbar = () => {
                 <span>Skin</span>
                 <span className="title-recolor">Guard</span>
             </motion.div>
-            <motion.ul className="nav-links" variants={staggerContainer}>
-                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+            <motion.ul className="nav-links" variants={staggerContainer} initial="initial" animate="animate">
+                <motion.li variants={FadeIn} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
                     <a href="#hero">Home</a>
                 </motion.li>
-                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                <motion.li variants={FadeIn} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
                     <a href="#learn">Learn</a>
                 </motion.li>
-                <motion.li variants={{FadeIn}} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                <motion.li variants={FadeIn} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
                     <a href="#detect">Detect</a>
                 </motion.li>
             </motion.ul>
