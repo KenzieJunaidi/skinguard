@@ -114,12 +114,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: left;
 }
 
 .hero-content {
   flex: 1;
-  text-align: left;
-  max-width: 50vw;
   padding: 0 5%;
 }
 
@@ -129,9 +128,32 @@ body {
 }
 
 .headline h1 {
-  color: var(--primary-color);
   font-size: 5rem;
   font-weight: 700;
+}
+
+.headline-2 {
+  color: var(--primary-color);
+}
+
+.glass-text {
+  color: var(--accent-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.75) 60%, transparent 80%);
+  --webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s infinite;
 }
 
 .subtitle {
@@ -158,16 +180,89 @@ body {
 
   color: white;
   background-color: var(--primary-color);
+
 }
 
 .hero-image {
   width: 50vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.info-box {
+  height: 350px;
+  width: 300px;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 15px;
+  padding: 3% 2%;
+
+  position: absolute;
+  left: 65%;
+  top: 60%;
+}
+
+.template-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.template-subtitle {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.template-desc {
+  margin-top: 65px;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  } 
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 1800px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .nav-links a {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
 }
