@@ -23,7 +23,7 @@
 body {
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--background);
+  background-color: white;
 }
 
 .app {
@@ -136,26 +136,6 @@ body {
   color: var(--primary-color);
 }
 
-.glass-text {
-  color: var(--accent-color);
-  overflow: hidden;
-  position: relative;
-}
-
-.glass-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,0.75) 60%, transparent 80%);
-  --webkit-background-clip: text;
-  color: transparent;
-  animation: shine 4s infinite;
-}
-
 .subtitle {
   color: black;
   font-size: 1.85rem;
@@ -227,15 +207,6 @@ body {
   color: white;
   font-weight: 500;
   font-size: 1rem;
-}
-
-@keyframes shine {
-  0% {
-    transform: translateX(-100%);
-  } 
-  100% {
-    transform: translateX(100%);
-  }
 }
 
 @media (max-width: 1800px) {

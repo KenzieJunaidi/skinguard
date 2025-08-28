@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ShinyText from "./ShinyText/ShinyText.jsx";
 
 export const Hero = () => {
 
@@ -8,7 +9,7 @@ export const Hero = () => {
             <div className="hero-container">
                 <motion.div className="hero-content">
                     <motion.div className="headline">
-                        <h1 className="glass-text">AI-Powered</h1>
+                        <ShinyText text="AI-Powered" speed={3} className='custom-class'/>
                         <h1 className="headline-2">Skin Lesion Check</h1>
                     </motion.div>
                     <h2 className="subtitle">Upload a photo of a mole or lesion and get instant AI-driven insights to support early skin health awareness.</h2>
