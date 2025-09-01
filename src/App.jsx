@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion';
 import './App.css'
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/hero';
+import { Hero } from './components/Hero';
+import { Learn } from './components/Learn';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
       <Hero />
+      <Learn />
     </div>
   )
 }

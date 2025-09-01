@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ShinyText from "./ShinyText/ShinyText.jsx";
+import { ShinyText } from "./ShinyText/ShinyText.jsx";
 
 export const Hero = () => {
 
