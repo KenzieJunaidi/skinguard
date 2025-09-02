@@ -5,7 +5,7 @@
 }
 
 :root {
-  --background: #F8FAFC;
+  --background: #F8F9FA;
   --card-background: #FFFFFF;
 
   --heading-color: #e2e8f0;
@@ -156,6 +156,8 @@ body {
 /* Hero Section */
 .hero {
   min-height: 100vh;
+
+  background-color: var(--background);
 
   display: flex;
   align-items: center;
