@@ -6,7 +6,7 @@ export const Steps = () => {
             <motion.div className="steps-content">
                 <motion.div className="steps-title">
                     <motion.h3>3 Steps</motion.h3>
-                    <motion.h5></motion.h5>
+                    <motion.h5>to keep your skin in check</motion.h5>
                 </motion.div>
 
                 <motion.div className="cards-container">

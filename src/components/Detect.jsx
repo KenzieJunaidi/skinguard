@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export const Detect = () => {
     return (
-        <motion.section id="learn" className="learn">
-            <motion.div className="learn-content">
+        <motion.section id="detect" className="detect">
+            <motion.div className="detect-content">
 
-                <motion.div className="learn-title">
+                <motion.div className="detect-title">
                     <motion.h3>SOLUTION</motion.h3>
                     <motion.h1>Detect</motion.h1>
                 </motion.div>
