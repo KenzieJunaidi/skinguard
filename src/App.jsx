@@ -4,6 +4,7 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Learn } from './components/Learn';
+import { Steps } from './components/Steps';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Hero />
       <Learn />
+      <Steps />
     </div>
   )
 }

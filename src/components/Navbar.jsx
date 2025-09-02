@@ -48,6 +48,9 @@ export const Navbar = () => {
                     <a href="#learn">Learn</a>
                 </motion.li>
                 <motion.li variants={FadeIn} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
+                    <a href="#steps">Steps</a>
+                </motion.li>
+                <motion.li variants={FadeIn} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}}>
                     <a href="#detect">Detect</a>
                 </motion.li>
             </motion.ul>
