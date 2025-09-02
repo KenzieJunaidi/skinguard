@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './App.css'
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Learn } from './components/Learn';
+import { Detect } from './components/Detect';
 import { Steps } from './components/Steps';
 
 
@@ -18,8 +18,8 @@ function App() {
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
       <Hero />
-      <Learn />
       <Steps />
+      <Detect />
     </div>
   )
 }
