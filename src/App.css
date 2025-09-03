@@ -334,6 +334,11 @@ body {
   flex-direction: column;
 }
 
+.card i {
+  align-self: center;
+  margin: 1.5rem 0;
+}
+
 .card h3 {
   position: relative;
   margin-bottom: 15px;
