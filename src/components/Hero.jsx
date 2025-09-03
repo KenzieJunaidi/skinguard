@@ -20,7 +20,7 @@ export const Hero = () => {
                 </motion.div>
 
                 <motion.div className="hero-image">
-                    <img src="/attempt.jpg" alt="Face Image" />
+                    <img src="/hero-background.jpg" alt="Face Image" />
 
                     <motion.div className="info-box">
                         <h1 className="template-title">Result Boolean</h1>
