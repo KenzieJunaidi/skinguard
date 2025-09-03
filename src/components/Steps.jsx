@@ -27,7 +27,7 @@ export const Steps = () => {
                     <motion.div className="card" whileHover={{ translateY: -10 }} transition={{ duration: 0.6 }}>
                         <i className="fas fa-chart-line" style={{ fontSize: "5rem", color: "black" }}/>
                         <motion.h3>Get Results & Insights</motion.h3>
-                        <motion.p>Know whether the condition looks benign <item style={{color: '#4CAF50'}}>safe</item> or potentially harmful.</motion.p>
+                        <motion.p>Know whether the condition looks benign <item style={{ fontWeight: 700, color: '#4CAF50'}}>safe</item> or potentially harmful.</motion.p>
                         <br></br>
                         <motion.p>You’ll also see possible disease categories (e.g., Acne, Melanoma, Psoriasis).</motion.p>
                     </motion.div>
