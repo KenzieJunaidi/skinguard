@@ -23,9 +23,10 @@ export const Hero = () => {
                     <img src="/hero-background.jpg" alt="Face Image" />
 
                     <motion.div className="info-box">
-                        <h1 className="template-title">Result Boolean</h1>
-                        <h3 className="template-subtitle">Disease Name</h3>
-                        <p className="template-desc">Description</p>
+                        <h1 className="template-title">92%</h1>
+                        <h3 className="template-subtitle">ACTINIC KERATOSIS (AK)</h3>
+                        <p className="template-desc-header">Warning</p>
+                        <p className="template-desc">Rough, scaly patch from sun damage that can turn into skin cancer if untreated. Common on the face, scalp, and hands, it’s treated with freezing or topical meds. Sun protection helps prevent it.</p>
                     </motion.div>
                 </motion.div>
             </div>

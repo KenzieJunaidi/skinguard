@@ -18,6 +18,7 @@
 
   --subtle-border: #E2E8F0;
   --positive-color: #4CAF50;
+  --warning-color: #FFA000;
   --negative-color: #D32F2F;
 } 
 
@@ -255,30 +256,37 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0,0,0,0.6);
   border-radius: 15px;
-  padding: 3% 2%;
+  padding: 1.5% 2%;
 
   position: absolute;
   left: 65%;
-  top: 60%;
+  top: 55%;
 }
 
 .template-title {
   color: white;
-  font-weight: 700;
-  font-size: 1.7rem;
+  font-weight: 800;
+  font-size: 3.5rem;
 }
 
 .template-subtitle {
-  color: white;
+  line-height: 0.5;
+  color: rgb(185, 185, 185);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.template-desc-header {
+  margin-top: 30px;
+  color: var(--warning-color);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .template-desc {
-  margin-top: 65px;
   color: white;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 100;
+  font-size: 0.9rem;
 }
 
 /* Steps Section */
