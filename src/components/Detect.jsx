@@ -5,8 +5,6 @@ export const Detect = () => {
     return (
         <motion.section id="detect" className="detect">
             <motion.div className="detect-content">
-                <Switch />
-
                 <motion.div className="detect-title">
                     <motion.h3>SOLUTION</motion.h3>
                     <motion.h1>Detect</motion.h1>
@@ -14,7 +12,7 @@ export const Detect = () => {
 
                 <motion.div className="box-container">
                     <motion.div className="large-box">
-                        
+                        <Switch />
                     </motion.div>
 
                     <motion.div className="small-box">
