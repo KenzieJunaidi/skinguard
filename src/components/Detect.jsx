@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { Switch } from "./Switch/Switch";
 
 export const Detect = () => {
     return (
         <motion.section id="detect" className="detect">
             <motion.div className="detect-content">
+                <Switch />
 
                 <motion.div className="detect-title">
                     <motion.h3>SOLUTION</motion.h3>
