@@ -12,16 +12,19 @@ export const Detect = () => {
 
                 <motion.div className="box-container">
                     <motion.div className="large-box">
+                        <motion.div className="camera-space">
+                            <input type="file" accept="image/*" />
+                        </motion.div>
                         <Switch />
                     </motion.div>
 
                     <motion.div className="small-box">
                         <motion.div className="small-box-1">
-                          
+                            <p>RESULT</p>
                         </motion.div>
 
                         <motion.div className="small-box-2">
-
+                            <p>HEALTH RECOMMENDATIONS</p>
                         </motion.div>
                     </motion.div>
                 </motion.div>
