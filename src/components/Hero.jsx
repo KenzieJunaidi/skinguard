@@ -14,7 +14,7 @@ export const Hero = () => {
                     </motion.div>
                     <h2 className="subtitle">Upload a photo of a mole or lesion and get instant AI-driven insights to support early skin health awareness.</h2>
                     <p className="note">
-                        <i class="fas fa-exclamation-triangle" style={{color: "#f1c40f"}}></i> This tool does not provide a medical diagnosis. Please consult a dermatologist.
+                        <i className="fas fa-exclamation-triangle" style={{color: "#f1c40f"}}></i> This tool does not provide a medical diagnosis. Please consult a dermatologist.
                     </p>
                     <motion.a className="cta-btn" whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2, ease: "easeIn"}}>Check My Skin</motion.a>
                 </motion.div>

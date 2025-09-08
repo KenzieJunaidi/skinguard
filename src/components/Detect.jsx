@@ -15,7 +15,11 @@ export const Detect = () => {
                         <motion.div className="camera-space">
                             <input type="file" accept="image/*" />
                         </motion.div>
-                        <Switch />
+                    
+                        <motion.div className="detect-options">
+                            <Switch />
+                            <motion.button className="detect-button" whileTap={{ scale: 0.95 }}>Scan</motion.button>
+                        </motion.div>
                     </motion.div>
 
                     <motion.div className="small-box">

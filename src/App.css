@@ -353,7 +353,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  left: -100%;
+  left: -200%;
   width: 100%;
   
   background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%);
@@ -437,6 +437,28 @@ body {
   gap: 3rem;
 }
 
+.detect-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detect-button {
+  all: unset;
+
+  padding: 0.1rem;
+
+  text-align: center;
+  font-family: inherit;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  width: 7.5rem;
+  background-color: var(--text-color-dark);
+  border-radius: 15px;
+}
+
 .detect-title h1 {
   color: var(--text-color-dark);
   font-size: 3.5rem;
@@ -460,7 +482,8 @@ body {
 .large-box {
   min-width: 350px;
   flex: 3 1 0;
-  border: 2px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.2);
   background-color: var(--card-background);
   border-radius: 15px;
 
@@ -477,7 +500,8 @@ body {
 
 .small-box-1, .small-box-2 {
   flex: 1;
-  border: 2px solid black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,0.2);
   background-color: var(--card-background);
   border-radius: 15px;
   padding: 2rem;
