@@ -1,7 +1,36 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Switch } from "./Switch/Switch";
 
 export const Detect = () => {
+
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [previewImage, setPreviewImage] = useState(null);
+    const [result, setResult] = useState(null);
+
+    const handleAnalyze = async () => {
+        if (!selectedImage) return;
+
+        const formData = new FormData();
+        formData.append("file", selectedImage);
+
+        try {
+            const res = await fetch("http://127.0.0.1:5000/detect", {
+            method: "POST",
+            body: formData,
+            });
+
+            if (!res.ok) {
+            throw new Error(`Server error: ${res.status}`);
+            }
+
+            const data = await res.json();
+            console.log("Prediction:", data);
+        } catch (err) {
+            console.error("Fetch error:", err);
+        }
+    };
+
     return (
         <motion.section id="detect" className="detect">
             <motion.div className="detect-content">
@@ -13,18 +42,33 @@ export const Detect = () => {
                 <motion.div className="box-container">
                     <motion.div className="large-box">
                         <motion.div className="camera-space">
-                            <input type="file" accept="image/*" />
+                            <img className="detect-image" src={previewImage ? previewImage : '/null.png'} alt="Insert Image"/>
+                            <input 
+                                id="fileInput"
+                                type="file" 
+                                accept="image/*"
+                                onChange={(e) => {
+                                    const img_file = e.target.files?.[0];
+                                    
+                                    if(img_file){
+                                        setSelectedImage(img_file);
+                                        setPreviewImage(URL.createObjectURL(img_file));
+                                    }
+                                }}
+                            />
                         </motion.div>
                     
                         <motion.div className="detect-options">
                             <Switch />
-                            <motion.button className="detect-button" whileTap={{ scale: 0.95 }}>Scan</motion.button>
+                            <motion.button className="detect-button" onClick={handleAnalyze} whileTap={{ scale: 0.95 }}>Scan</motion.button>
                         </motion.div>
                     </motion.div>
 
                     <motion.div className="small-box">
                         <motion.div className="small-box-1">
                             <p>RESULT</p>
+                            
+                            {result && <p>AI Prediction: {JSON.stringify(result)}</p>}
                         </motion.div>
 
                         <motion.div className="small-box-2">
@@ -35,4 +79,4 @@ export const Detect = () => {
             </motion.div>
         </motion.section>
     );
-} 
+}
