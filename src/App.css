@@ -157,7 +157,7 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  max-height: 100vh;
 
   background-color: var(--background);
 
@@ -434,7 +434,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .detect-options {
@@ -455,8 +455,9 @@ body {
   font-size: 1.5rem;
 
   width: 7.5rem;
-  background-color: var(--text-color-dark);
-  border-radius: 15px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .detect-title h1 {
@@ -471,6 +472,7 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
+  line-height: 1;
 }
 
 .box-container {
@@ -509,14 +511,41 @@ body {
 
 .camera-space {
   min-width: 100px;
-  min-height: 580px;
+  min-height: 400px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin-bottom: 20px;
+  padding: 3% 3rem;
+
+  align-items: center;
 
   border: 3px dashed rgba(0,0,0,0.4);
   border-radius: 15px;
 }
 
+.custom-input {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  
+  border-radius: 5px;
+  min-width: min(200px, 5%);
+  padding: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+}
+
+.detect-image {
+  object-fit: contain;
+  max-width: 400px;
+  max-height: 300px;
+}
 
 /* Media Queries */
 @media (max-width: 1800px) {

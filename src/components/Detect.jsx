@@ -25,6 +25,7 @@ export const Detect = () => {
             }
 
             const data = await res.json();
+            setResult(data);
             console.log("Prediction:", data);
         } catch (err) {
             console.error("Fetch error:", err);
@@ -42,11 +43,13 @@ export const Detect = () => {
                 <motion.div className="box-container">
                     <motion.div className="large-box">
                         <motion.div className="camera-space">
-                            <img className="detect-image" src={previewImage ? previewImage : '/null.png'} alt="Insert Image"/>
+                            <img className="detect-image" width={400} height={400} src={previewImage ? previewImage : '/null.png'} alt="Insert Image"/>
+                            <motion.label for="fileInput" className="custom-input" whileTap={{ scale: 0.95 }}>Upload Image</motion.label>
                             <input 
                                 id="fileInput"
                                 type="file" 
                                 accept="image/*"
+                                hidden
                                 onChange={(e) => {
                                     const img_file = e.target.files?.[0];
                                     
