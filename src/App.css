@@ -542,9 +542,10 @@ body {
 }
 
 .detect-image {
-  object-fit: contain;
+  object-fit: cover;
   max-width: 400px;
   max-height: 300px;
+  border-radius: 15px;
 }
 
 /* Media Queries */
