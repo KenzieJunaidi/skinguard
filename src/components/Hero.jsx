@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ShinyText } from "./ShinyText/ShinyText.jsx";
 
 export const Hero = () => {
 
@@ -8,28 +7,35 @@ export const Hero = () => {
         <motion.section id="hero" className="hero">
             <div className="hero-container">
                 <motion.div className="hero-content">
-                    <motion.div className="headline">
-                        <ShinyText text="AI-Powered" speed={3} className='custom-class'/>
-                        <h1 className="headline-2">Skin Lesion Check</h1>
+                    <motion.h1>Skin Disease Detection <br/> Made Simple</motion.h1>
+                    <motion.h3>Upload a skin image to get a fast preliminary classification, confidence score, and next-step guidance. Designed for educational use and early awareness.</motion.h3>
+                
+                    <motion.div className="btn-container">
+                        <motion.a href="#detect" className="btn-1" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>Try Detection</motion.a>
+                        <motion.a href="#about" className="btn-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>How It Works</motion.a>
                     </motion.div>
-                    <h2 className="subtitle">Upload a photo of a mole or lesion and get instant AI-driven insights to support early skin health awareness.</h2>
-                    <p className="note">
-                        <i className="fas fa-exclamation-triangle" style={{color: "#f1c40f"}}></i> This tool does not provide a medical diagnosis. Please consult a dermatologist.
-                    </p>
-                    <motion.a className="cta-btn" whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} transition={{duration: 0.2, ease: "easeIn"}}>Check My Skin</motion.a>
+                
                 </motion.div>
 
                 <motion.div className="hero-image">
-                    <img src="/hero-background.jpg" alt="Face Image" />
-
-                    <motion.div className="info-box">
-                        <h1 className="template-title">92%</h1>
-                        <h3 className="template-subtitle">ACTINIC KERATOSIS (AK)</h3>
-                        <p className="template-desc-header">Warning</p>
-                        <p className="template-desc">Rough, scaly patch from sun damage that can turn into skin cancer if untreated. Common on the face, scalp, and hands, it’s treated with freezing or topical meds. Sun protection helps prevent it.</p>
-                    </motion.div>
+                    <img src="./background.jpg" alt="hero-image"></img>
                 </motion.div>
             </div>
+            <div className="perks">
+                <motion.div className="perk-card">
+                    <h5>Fast & Simple</h5>
+                    <p>Upload an image and receive a preliminary classification within seconds.</p>
+                </motion.div>
+                <motion.div className="perk-card">
+                    <h5>Educational</h5>
+                    <p>Confidence scores and helpful guidance to understand potential conditions.</p>
+                </motion.div>
+                <motion.div className="perk-card">
+                    <h5>Private</h5>
+                    <p>Images are processed only for classification. No data is stored in this demo.</p>
+                </motion.div>
+            </div>
+            <hr id="about"></hr>
         </motion.section>
     );
 }

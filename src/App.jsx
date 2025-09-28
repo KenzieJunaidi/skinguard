@@ -4,7 +4,7 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Detect } from './components/Detect';
-import { Steps } from './components/Steps';
+import { About } from './components/About';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
       <Navbar />
       <Hero />
-      <Steps />
+      <About />
       <Detect />
     </div>
   )
