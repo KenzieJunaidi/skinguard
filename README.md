@@ -23,6 +23,15 @@ SkinGuard is an AI-powered skin disease detection system that helps users identi
 - **Preprocessing:** Images were resized, normalized, and augmented to enhance model generalization and performance.
 
 
+## 📈 Model Evaluation
+
+SkinGuard’s performance on the test set demonstrates strong and balanced classification across multiple skin disease categories:
+
+- **Overall Accuracy:** 90% — the model correctly identifies skin disease classes in 9 out of 10 cases.  
+- **Macro Average:** Precision 87%, Recall 88%, F1-score 87% — demonstrating consistent performance across all classes.  
+- **Weighted Average:** Precision 90%, Recall 90%, F1-score 90% — showing strong overall performance, taking class imbalance into account.
+
+
 ## 🌠 The Process  
 
 The goal of SkinGuard is to provide users with a reliable AI assistant for preliminary skin condition identification. The project pipeline includes image collection and preprocessing, training a ResNet-based convolutional neural network, and evaluating the model with metrics like accuracy, precision, and recall. Data augmentation and normalization techniques were applied to improve generalization. The final system outputs predictions along with confidence scores for user-friendly interpretation.
